@@ -1,0 +1,15 @@
+# Notion AI學習資料庫 — Agent 相關課程 YouTube URL
+# 來源：https://rune-sea-d8b.notion.site/AI-2bcdb82eb7ff81afb178cca49446bfba
+# 最後更新：2026-06-16
+# 說明：此檔案已預先建好，可直接跳過 extract_notion.py，不需要 Firecrawl API Key
+
+# 單支影片
+https://www.youtube.com/watch?v=b_9D7T0n4RA
+https://www.youtube.com/watch?v=Yzpx4Xaigms
+https://www.youtube.com/watch?v=4gciWspBVHw
+https://www.youtube.com/watch?v=qYKRiZBWrZ4
+https://www.youtube.com/watch?v=MS2qP7HHfXw
+https://www.youtube.com/watch?v=QHHTcYBEIEo
+
+# 播放清單（sensebar Codex 系列，8 支）
+https://www.youtube.com/playlist?list=PLkNQUBglz8EyvaS1lFWnFeLR4JvlSzB48

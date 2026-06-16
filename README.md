@@ -28,18 +28,11 @@ graph TD
 ## 📦 Prerequisites / 安裝需求
 
 ```bash
-pip install yt-dlp firecrawl-py requests
+pip install yt-dlp
 ```
 
-Set your Firecrawl API key (free at https://firecrawl.dev):
-
-```bash
-# Windows
-set FIRECRAWL_API_KEY=your_key_here
-
-# macOS / Linux
-export FIRECRAWL_API_KEY=your_key_here
-```
+> ✅ **No API key required.** `notion_ai_urls.txt` is pre-built and included in this repo — you can skip `extract_notion.py` entirely.  
+> ✅ **不需要任何 API Key。** `notion_ai_urls.txt` 已預先建好放在 repo 裡，可以直接略過 `extract_notion.py`。
 
 ---
 
@@ -57,16 +50,21 @@ python extract_sensebar.py
 
 ---
 
-### Step 1b — Extract Agent Courses from Notion / 從 Notion 抓取 Agent 相關課程
+### Step 1b — Notion Agent Course URLs / Notion Agent 課程 URL
 
+> ✅ **Already done. Skip this step.**  
+> ✅ **已預先完成，略過此步驟。**
+
+`notion_ai_urls.txt` is pre-built and committed to this repo. It contains 7 sources (6 individual videos + 1 playlist = 14 videos total) scraped from the [AI工具資料庫與學習資料庫](https://rune-sea-d8b.notion.site/AI-2bcdb82eb7ff81afb178cca49446bfba) Notion page.
+
+`notion_ai_urls.txt` 已預先建好並放在 repo 中，包含 7 個來源（6 支單影片 + 1 個播放清單 = 共 14 支影片），從上述 Notion 頁面人工篩選 Agent 相關課程。
+
+**To refresh / 如需更新（需要 Firecrawl API Key）：**
 ```bash
+pip install firecrawl-py
+export FIRECRAWL_API_KEY=your_key_here
 python extract_notion.py
 ```
-
-- **Source / 來源**: [AI工具資料庫與學習資料庫](https://rune-sea-d8b.notion.site/AI-2bcdb82eb7ff81afb178cca49446bfba)
-- **Method / 方法**: Firecrawl scrapes the Notion page (including scroll to load more), finds all course sub-pages, visits each one to extract the embedded YouTube URL
-- **Filter / 篩選**: Course titles or URLs containing `agent`, `codex`, `opencode`, `antigravity`, `claude`, `cowork`, `agentic`, `workflow`
-- **Output / 輸出**: `notion_ai_urls.txt`
 
 ---
 
@@ -130,38 +128,50 @@ As an Agent, run this task weekly / 作為 Agent，每週執行以下任務：
 
 ## 📁 Files in This Repository / 本 Repo 的檔案
 
-| File | Description |
-|------|-------------|
-| `extract_sensebar.py` | Extracts Agent-related video URLs from @sensebar YouTube channel |
-| `extract_notion.py` | Scrapes Notion learning database, extracts YouTube URLs of Agent courses |
-| `download_subs.py` | Downloads & cleans subtitles → outputs `Clipping/*.md` |
-| `README.md` | This file — instructions for the executing Agent |
+| File | Required? | Description |
+|------|-----------|-------------|
+| `download_subs.py` | ✅ 必要 | Downloads & cleans subtitles → outputs `Clipping/*.md` |
+| `notion_ai_urls.txt` | ✅ 必要 | Pre-built Notion Agent course URLs (no API key needed) |
+| `extract_sensebar.py` | ⚡ 建議 | Extracts latest Agent videos from @sensebar (run to get newest content) |
+| `extract_notion.py` | 🔧 選用 | Re-scrapes Notion page to refresh `notion_ai_urls.txt` (needs Firecrawl API key) |
+| `README.md` | — | This file — instructions for the executing Agent |
 
 ---
 
 ## 🤖 Instructions for the Executing Agent / 給執行 Agent 的指令
 
-1. Clone this repository  
-   `git clone https://github.com/AlexLai-TW-1984/agent-knowledge-vault-builder`
+```bash
+# 1. Clone this repository / 克隆本 repo
+git clone https://github.com/AlexLai-TW-1984/agent-knowledge-vault-builder
+cd agent-knowledge-vault-builder
 
-2. Install dependencies  
-   `pip install yt-dlp firecrawl-py requests`
+# 2. Install the only required dependency / 安裝唯一必要套件
+pip install yt-dlp
 
-3. Set `FIRECRAWL_API_KEY` environment variable
+# 3. Get latest @sensebar Agent videos / 抓取 sensebar 最新 Agent 影片
+python extract_sensebar.py
 
-4. Run Step 1a: `python extract_sensebar.py`
+# 4. Download subtitles from sensebar / 下載 sensebar 字幕
+python download_subs.py sensebar_ai_urls.txt
 
-5. Run Step 1b: `python extract_notion.py`
+# 5. Download subtitles from Notion (pre-built, no API key needed) / 下載 Notion 課程字幕（預建清單，免 API Key）
+python download_subs.py notion_ai_urls.txt
 
-6. Run Step 2 (twice): 
-   ```
-   python download_subs.py sensebar_ai_urls.txt
-   python download_subs.py notion_ai_urls.txt
-   ```
+# 6. Create vault folders / 建立知識庫資料夾
+mkdir -p 創作庫 知識庫
+```
 
-7. Create `創作庫/` and `知識庫/` folders
+After running, your vault looks like / 執行後的知識庫結構：
 
-8. Initiate the Weekly Agent Restructure prompt to begin maintaining the knowledge vault
+```
+agent-knowledge-vault-builder/
+├── Clipping/          ← All subtitle Markdown files / 所有字幕 Markdown
+├── 創作庫/
+└── 知識庫/
+```
+
+Initiate the Weekly Agent Restructure prompt to begin maintaining the knowledge vault.  
+啟動每週知識整理 prompt，開始維護知識庫。
 
 ---
 
@@ -182,7 +192,7 @@ As an Agent, run this task weekly / 作為 Agent，每週執行以下任務：
 
 - Original workflow concept: [sensebar-agent-knowledge-vault-builder](https://github.com/mathruffian-dot/sensebar-agent-knowledge-vault-builder) by [@mathruffian-dot](https://github.com/mathruffian-dot)
 - Learning resource database: [AI工具資料庫](https://rune-sea-d8b.notion.site/AI-2bcdb82eb7ff81afb178cca49446bfba)
-- Built with: `yt-dlp`, `firecrawl-py`, Claude Code
+- Built with: `yt-dlp`, Claude Code
 
 ---
 
