@@ -13,7 +13,7 @@
 
 ```mermaid
 graph TD
-    A[@sensebar YouTube Channel] -->|extract_sensebar.py| B[sensebar_ai_urls.txt]
+    A["@sensebar YouTube Channel"] -->|extract_sensebar.py| B[sensebar_ai_urls.txt]
     C[Notion Learning Database] -->|extract_notion.py| D[notion_ai_urls.txt]
     B -->|download_subs.py| E[Clipping/ Raw Subtitles]
     D -->|download_subs.py| E
