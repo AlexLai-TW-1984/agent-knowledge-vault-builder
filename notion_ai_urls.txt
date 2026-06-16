@@ -1,19 +1,66 @@
-# Notion AI學習資料庫 — Agent 相關課程 YouTube URL
+# Notion AI學習資料庫 — Agent/Claude 相關課程 YouTube URL
 # 來源：https://rune-sea-d8b.notion.site/AI-2bcdb82eb7ff81afb178cca49446bfba
-# 最後更新：2026-06-16
+# 最後更新：2026-06-16（從 AI學習資料清單 完整展開後更新，共 92 筆）
 # 說明：此檔案已預先建好，可直接跳過 extract_notion.py，不需要 Firecrawl API Key
 
-# 單支影片
+# ── Agent 核心概念 ──────────────────────────────────────────────────────────────
+# 解剖小龍蝦 — 以 OpenClaw 為例介紹 AI Agent 的運作原理（Hung-yi Lee）
+https://www.youtube.com/watch?v=2rcJdFuNbZQ
+# AI Agent是什麼？一口氣了解AI技術演進！LLM、Workflow、Agent到底差在哪？（Kelly Tsai）
+https://www.youtube.com/watch?v=_hG0pcBnPQw
+# 那些 Agent神文沒告訴你的事：照著做系統只會更爛（數字黑魔法）
 https://www.youtube.com/watch?v=b_9D7T0n4RA
-https://www.youtube.com/watch?v=Yzpx4Xaigms
-https://www.youtube.com/watch?v=4gciWspBVHw
+
+# ── AI Agent 基本功 系列（三師爸Sense Bar，Antigravity/Codex/Claude）──────────
+# AI Agent 基本功 播放清單
+https://www.youtube.com/playlist?list=PLkNQUBglz8EyGuOIKfrKX9V7ot5VbZKha
+
+# ── Claude 教學系列 ─────────────────────────────────────────────────────────────
+# Claude.ai教學應用 播放清單（三師爸Sense Bar）
+https://www.youtube.com/playlist?list=PLkNQUBglz8EwHJQu6ijh5ra41RTfaaZT8
+# 你唯一需要的Claude教學，從入門到打造你的AI團隊（漢克蔡）
 https://www.youtube.com/watch?v=qYKRiZBWrZ4
-https://www.youtube.com/watch?v=MS2qP7HHfXw
-https://www.youtube.com/watch?v=QHHTcYBEIEo
+# 一次搞懂Claude AI全生態！（孔老師AI研習社）
+https://www.youtube.com/watch?v=zm3K831v470
+# Claude根本不是AI工具，是工作團隊（完整教學）（漢克蔡）
+https://www.youtube.com/watch?v=GulVqC1ifL0
+# 你的 AI 用法可能全錯了（Gary Chen）
+https://www.youtube.com/watch?v=FQ81w5UO9u8
 
-# 播放清單（sensebar Codex 系列，8 支）
-https://www.youtube.com/playlist?list=PLkNQUBglz8EyvaS1lFWnFeLR4JvlSzB48
-
-# 手動新增
+# ── Claude Code 教學 ────────────────────────────────────────────────────────────
+# Claude Code 零基礎入門（上）｜非工程師也能打造 AI 助理（侯智薰）
 https://www.youtube.com/watch?v=xo7dE80ktu4
+# Claude Code 零基礎入門（下）｜Vibe Coding 實戰（侯智薰）
 https://www.youtube.com/watch?v=80kCvbsuniw
+# 還在羨慕別人用 AI 開發酷產品？Claude Code 保姆級教學（PAPAYA 電腦教室）
+https://www.youtube.com/watch?v=2pM-7fBXc_M
+
+# ── Claude Cowork 教學 ──────────────────────────────────────────────────────────
+# Claude Cowork 最友善的手把手教學！（PAPAYA 電腦教室）
+https://www.youtube.com/watch?v=_cVTzXvb7xs
+# Claude Cowork新手必看！10個真實案例演示（孔老師AI研習社）
+https://www.youtube.com/watch?v=FrAAhSP9hPA
+# 忘掉ChatGPT吧！Claude Cowork + Skills才是你的全新自動化系統！（孔老師AI研習社）
+https://www.youtube.com/watch?v=a5OTTbSCpO8
+
+# ── Codex 系列 ──────────────────────────────────────────────────────────────────
+# ChatGPT Codex 系列教學播放清單（三師爸Sense Bar，8支）
+https://www.youtube.com/playlist?list=PLkNQUBglz8EyvaS1lFWnFeLR4JvlSzB48
+# Codex 保母級全攻略，海量實戰教學（技术爬爬虾 TechShrimp）
+https://www.youtube.com/watch?v=4gciWspBVHw
+
+# ── Agentic Workflow / 多工具整合 ───────────────────────────────────────────────
+# AI 時代非技術人最該學的設計能力：把 Human SOP 變成 Agentic Workflow（Gary Chen）
+https://www.youtube.com/watch?v=Yzpx4Xaigms
+# 你不是不會寫 Prompt，是不會定義任務（Gary Chen，含Antigravity/Codex/Claude）
+https://www.youtube.com/watch?v=KNP9Mr1rUQY
+# AI 多工具分工教學，三個問題判斷任務該交給誰（Gary Chen）
+https://www.youtube.com/watch?v=QHHTcYBEIEo
+# 設計到開發只要一鍵！ClaudeDesign + ClaudeCode 終極工作流（YAHA學堂）
+https://www.youtube.com/watch?v=MS2qP7HHfXw
+
+# ── Google Antigravity ───────────────────────────────────────────────────────────
+# Antigravity 新手入門｜為什麼這個 AI 工具讓我放棄 Gemini、ChatGPT
+https://www.youtube.com/watch?v=lHkz99ohnQE
+# 【Vibe Coding 學習地圖】用實戰帶你搞懂 Gemini、Google AI Studio、Antigravity 的使用情境
+https://www.youtube.com/watch?v=2hbYCe_E5aU
